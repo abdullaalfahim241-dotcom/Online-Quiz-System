@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Online Quiz System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- START PAGE -->
+        <div id="start-page">
+
+            <h1>📝 Online Quiz System</h1>
+
+            <p class="subtitle">
+                50 Mixed MCQ Questions
+            </p>
+
+            <input
+                type="text"
+                id="student-name"
+                placeholder="Enter Your Name"
+            >
+
+            <input
+                type="text"
+                id="student-id"
+                placeholder="Enter Student ID"
+            >
+
+            <button id="start-btn">
+                Start Quiz
+            </button>
+
+        </div>
+
+
+        <!-- QUIZ PAGE -->
+        <div id="quiz-page" class="hidden">
+
+            <div class="quiz-header">
+
+                <div>
+                    <h1>📝 Online Quiz</h1>
+
+                    <p>
+                        Student:
+                        <strong id="display-name"></strong>
+                    </p>
+
+                    <p>
+                        ID:
+                        <strong id="display-id"></strong>
+                    </p>
+                </div>
+
+                <div id="timer">
+                    60:00
+                </div>
+
+            </div>
+
+
+            <div class="instruction">
+                Select one answer for each question.
+            </div>
+
+
+            <!-- ALL QUESTIONS WILL APPEAR HERE -->
+            <div id="questions-container"></div>
+
+
+            <button id="submit-btn">
+                Submit Quiz
+            </button>
+
+        </div>
+
+
+        <!-- RESULT PAGE -->
+        <!-- RESULT PAGE -->
+<div id="result-page" class="hidden"
+ style="display: none;"></div>
+
+    <h1>🎉 Quiz Result</h1>
+
+    <div class="student-result">
+        <p>
+            Student Name:
+            <strong id="result-name"></strong>
+        </p>
+
+        <p>
+            Student ID:
+            <strong id="result-id"></strong>
+        </p>
+    </div>
+
+    <div class="result-card">
+
+        <p>Total Questions: <strong id="total"></strong></p>
+
+        <p>Correct Answers: <strong id="correct"></strong></p>
+
+        <p>Wrong Answers: <strong id="wrong"></strong></p>
+
+        <p>Unanswered: <strong id="unanswered"></strong></p>
+
+        <p>Score: <strong id="score"></strong></p>
+
+        <p>Percentage: <strong id="percentage"></strong>%</p>
+
+        <p>Grade: <strong id="grade"></strong></p>
+
+    </div>
+
+    <!-- Answer Script -->
+    <div class="answer-script">
+
+        <h2>📋 Answer Script</h2>
+
+        <div id="answer-review"></div>
+
+    </div>
+
+    <button id="restart-btn">
+        🔄 Restart Quiz
+    </button>
+
+</div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

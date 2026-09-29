@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="login-page" class="admin-container">
+    <div class="login-box">
+        <h1>🔐 Admin Login</h1>
+
+        <input id="username" type="text" placeholder="Admin Username">
+        <input id="password" type="password" placeholder="Admin Password">
+
+        <button onclick="adminLogin()">Login</button>
+
+        <p id="login-message"></p>
+    </div>
+</div>
+
+
+<!-- DASHBOARD -->
+<div id="dashboard" class="hidden">
+
+    <header>
+        <h1>📊 Admin Dashboard</h1>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </header>
+
+    <main>
+
+        <div class="dashboard-card">
+
+            <h2>📝 Online Quiz System</h2>
+            <p>Manage your MCQ questions</p>
+
+            <div class="stats">
+
+                <div class="stat-box">
+                    <h3 id="question-count">0</h3>
+                    <p>Total Questions</p>
+                </div>
+
+                <div class="stat-box">
+                    <h3>50</h3>
+                    <p>Maximum Questions</p>
+                </div>
+
+            </div>
+
+
+            <!-- ADD QUESTION FORM -->
+
+            <div class="question-form">
+
+                <h2 id="form-title">➕ Add Question</h2>
+
+                <input
+                    type="text"
+                    id="question"
+                    placeholder="Enter Question"
+                >
+
+                <input
+                    type="text"
+                    id="optionA"
+                    placeholder="Option A"
+                >
+
+                <input
+                    type="text"
+                    id="optionB"
+                    placeholder="Option B"
+                >
+
+                <input
+                    type="text"
+                    id="optionC"
+                    placeholder="Option C"
+                >
+
+                <input
+                    type="text"
+                    id="optionD"
+                    placeholder="Option D"
+                >
+
+                <select id="correctAnswer">
+
+                    <option value="">
+                        Select Correct Answer
+                    </option>
+
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+
+                </select>
+
+                <button
+                    class="save-btn"
+                    onclick="saveQuestion()"
+                >
+                    💾 Save Question
+                </button>
+
+                <button
+                    id="cancel-btn"
+                    class="cancel-btn hidden"
+                    onclick="cancelEdit()"
+                >
+                    Cancel Edit
+                </button>
+
+            </div>
+
+
+            <!-- QUESTION LIST -->
+
+            <h2 class="list-title">📚 Question List</h2>
+
+            <div id="question-list"></div>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script src="admin.js"></script>
+
+</body>
+</html>

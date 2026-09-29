@@ -1,0 +1,528 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
+
+    min-height: 100vh;
+
+    padding: 30px 15px;
+}
+
+
+.container {
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   START PAGE
+========================= */
+
+#start-page {
+    text-align: center;
+
+    padding: 40px 20px;
+}
+
+
+#start-page h1 {
+    margin-bottom: 10px;
+
+    color: #333;
+}
+
+
+.subtitle {
+    color: #666;
+
+    margin-bottom: 30px;
+}
+
+
+input {
+    display: block;
+
+    width: 100%;
+
+    max-width: 500px;
+
+    margin: 15px auto;
+
+    padding: 14px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+
+input:focus {
+    outline: none;
+
+    border-color: #667eea;
+}
+
+
+#start-btn {
+    margin-top: 15px;
+
+    background: #667eea;
+
+    color: white;
+
+    border: none;
+
+    padding: 14px 35px;
+
+    border-radius: 8px;
+
+    font-size: 17px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   QUIZ HEADER
+========================= */
+
+.quiz-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    border-bottom: 1px solid #ddd;
+
+    padding-bottom: 20px;
+
+    margin-bottom: 20px;
+}
+
+
+.quiz-header h1 {
+    color: #333;
+
+    margin-bottom: 8px;
+}
+
+
+.quiz-header p {
+    color: #555;
+
+    margin: 4px 0;
+}
+
+
+#timer {
+    background: #222;
+
+    color: white;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    min-width: 90px;
+
+    text-align: center;
+}
+
+
+.instruction {
+    background: #eef2ff;
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    margin-bottom: 25px;
+
+    color: #333;
+}
+
+
+/* =========================
+   QUESTION
+========================= */
+
+.question-box {
+    border: 1px solid #ddd;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    background: #fff;
+}
+
+
+.question-title {
+    font-size: 18px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+
+    color: #222;
+}
+
+
+.option {
+    display: block;
+
+    padding: 12px 15px;
+
+    margin: 9px 0;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    background: #fafafa;
+
+    transition: 0.2s;
+}
+
+
+.option:hover {
+    background: #f0f2ff;
+
+    border-color: #667eea;
+}
+
+
+.option input {
+    width: auto;
+
+    display: inline;
+
+    margin: 0 8px 0 0;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+#submit-btn {
+    display: block;
+
+    width: 100%;
+
+    padding: 15px;
+
+    background: #dc3545;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    margin-top: 25px;
+}
+
+
+#submit-btn:hover {
+    background: #c82333;
+}
+
+
+/* =========================
+   RESULT
+========================= */
+
+#result-page {
+    text-align: center;
+
+    padding: 30px 10px;
+}
+
+
+#result-page h1 {
+    margin-bottom: 25px;
+
+    color: #333;
+}
+
+
+.student-result {
+    background: #eef2ff;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+}
+
+
+.student-result p {
+    margin: 8px;
+}
+
+
+.result-card {
+    background: #f5f5f5;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    margin-bottom: 25px;
+}
+
+
+.result-card p {
+    font-size: 18px;
+
+    margin: 14px;
+}
+
+
+#restart-btn {
+    background: #28a745;
+
+    color: white;
+
+    border: none;
+
+    padding: 13px 25px;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   HIDDEN
+========================= */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+
+    .container {
+        padding: 18px;
+    }
+
+
+    .quiz-header {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    #timer {
+        width: 100%;
+    }
+
+
+    .question-box {
+        padding: 15px;
+    }
+
+}
+/* =========================
+   ANSWER SCRIPT
+========================= */
+
+.answer-script {
+    margin-top: 30px;
+
+    text-align: left;
+}
+
+
+.answer-script h2 {
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    color: #333;
+}
+
+
+.review-question {
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    padding: 18px;
+
+    margin-bottom: 15px;
+
+    background: #fafafa;
+}
+
+
+.review-question.correct {
+    border-left: 6px solid #28a745;
+}
+
+
+.review-question.wrong {
+    border-left: 6px solid #dc3545;
+}
+
+
+.review-question.unanswered {
+    border-left: 6px solid #6c757d;
+}
+
+
+.review-question h3 {
+    font-size: 17px;
+
+    margin-bottom: 12px;
+
+    color: #222;
+}
+
+
+.review-question p {
+    margin: 7px 0;
+
+    line-height: 1.5;
+}
+
+
+.user-answer {
+    font-weight: bold;
+}
+
+
+.correct-answer {
+    color: #198754;
+
+    font-weight: bold;
+}
+
+
+.wrong-answer {
+    color: #dc3545;
+
+    font-weight: bold;
+}
+
+
+.status-correct {
+    color: #198754;
+
+    font-weight: bold;
+}
+
+
+.status-wrong {
+    color: #dc3545;
+
+    font-weight: bold;
+}
+
+
+.status-unanswered {
+    color: #6c757d;
+
+    font-weight: bold;
+}
+/* Result page শুরুতে লুকানো থাকবে */
+#result-page.hidden {
+    display: none !important;
+}
+@media (max-width: 768px) {
+
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .question-card {
+        padding: 15px;
+    }
+
+    .option {
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    .timer {
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .result-card {
+        padding: 15px;
+    }
+
+    .answer-script {
+        width: 100%;
+    }
+}
